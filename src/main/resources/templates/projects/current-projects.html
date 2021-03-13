@@ -9,7 +9,12 @@
 
     <div id="container">
         <h4> Current Projects</h4>
-        <table>
+
+        <a th:href="@{/projects/new}" class="btn btn-primary btn-sm">
+            New Project
+        </a>
+
+        <table class="table table-bordered table-striped" >
             <thead>
             <tr>
                 <th>Project Name</th>

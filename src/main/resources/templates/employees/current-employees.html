@@ -9,7 +9,12 @@
 
     <div>
         <h4> Current Employees</h4>
-        <table>
+
+        <a th:href="@{/employees/new}" class="btn btn-primary btn-sm">
+            New Employee
+        </a>
+
+        <table class="table table-bordered table-striped">
             <thead>
             <tr>
                 <th>First name</th>
