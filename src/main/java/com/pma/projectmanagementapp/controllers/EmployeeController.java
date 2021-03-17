@@ -18,6 +18,13 @@ public class EmployeeController {
     @Autowired
     EmployeeRepository empRepo;
 
+    @GetMapping
+    public String displayEmployees(Model model){
+        List<Employee> employees = empRepo.findAll();
+        model.addAttribute("employees", employees);
+        return "employees/current-employees";
+    }
+
     @GetMapping("/new")
     public String displayEmployeeForm(Model model){
         Employee anEmployee = new Employee();
